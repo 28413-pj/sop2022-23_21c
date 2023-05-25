@@ -1,13 +1,13 @@
-PATH - lista katalogów, gdzie SO szuka plików wykonywalnych (poleceń)
+PATH - lista katalogów, gdzie są przechowywane pliki wykonalne czyli polecenia
 
-RANDOM - losowa liczba od 0 do 32767
+RANDOM - funkcja, która podaje wylosowaną liczbe od 0 do 32767
 
 PWD - ścieżka katalogu gdzie aktualnie się znajduję użytkownik
 
-PS1 - to zmienna umożliwiająca formatowanie wiersza poleceń
+PS1 - to zmienna umożliwiająca formatowanie wiersza poleceń, np. zmiana koloru
 
 USER - nazwa obecnego użytkownika
 
 HOSTNAME - nazwa komputera np. w Sieci
 
-OSTYPE - pokazuję na jakim OS działamy aktualnie
+OSTYPE - pokazuję na jakim dokłanie np. Linuxie działamy
