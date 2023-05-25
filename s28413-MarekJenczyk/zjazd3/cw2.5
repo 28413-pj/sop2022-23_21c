@@ -1,9 +1,12 @@
 #!/bin/bash
-for i in $(ls -p | grep -v /);
-do
-	echo -e "\n $i \n"
-	cat $i
-	echo -e "\n"
-	tac $i
-done
 
+plik=("$@")
+liczba_plik=${#files[@]}
+for (( i=liczba_plik-1; i>=0; i-- )); do
+    echo "Zawartość pliku ${plik[i]}:"
+    liczba_plik=$(wc -l < "${plik[i]}")
+    for (( j=liczba_plik; j>=1; j-- )); do
+        sed -n "${j}p" "${plik[i]}"
+    done
+    echo ""
+done
