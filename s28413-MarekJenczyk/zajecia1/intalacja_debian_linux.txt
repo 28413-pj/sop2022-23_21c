@@ -53,15 +53,33 @@
   2.4 Oczywiście, wybieram język angielski, by przy jaki
   2.5 Lokalizacja - "Europe", i później "Poland"
   2.6 Język klawiatury - "American/English"
+  2.6.1 Układ klawiatury wybieram en_US.UTF-8, czyli Amerykański, czyli codziennego użytku
   2.7 Hostname i Domain name pozostawiam puste, ponieważ, nie posiadam domeny, ustwiam moje ulubione hasło rootowi, ustawiam nazwę użytkownikowi i dajhe mu hasło, oczywiście inne niż Root'owi
   2.8 Całe miejsce na dysku przypisuję na jednej partycji, ponieważ nigdy więcej i tak virtualki nie odpale
   2.9 -Use entire disk and set up LVM - oznacza, że możemy utworzyć partycję na cały dysk z LVM, który odpowiwada za zarządzanie przestrzenią
   2.10 - Use enitre disk and set up encrypted LVM - oznacza to samo co wyżej tylko jest szyfrowane
-  2.11 Wybieram Ext4 jako system plików, najnowsza i najlepsza wersja
+  2.11 Wybieram Ext4 jako system plików.
+  Dlaczego? Ponieważ jest to najnowsza wersja EXT, kompatybilna wstecz z wczesniejszymi wersjami oraz ma lepszą wydajśność.
+      Pozostałe opcje to:
+      Ext 3 - Mniejsza wydajność i limity, mechanizm księgowania
+      Ext 2 - brak mechanizmu księgowania 
+      BRTFS - daje możliwość tworzenia RAID'ów, wbudowane zarządzanie woluminami, automatyczna naprawa uszkodzonych danych.
+      JFS - bardzo podobny do Ext 4, też ma mechanizm księgowania, obsługa bardzo dużych rozmiarów partycji
+      XFS - dla serwerów, również obługa bardzo dużych rozmiarów partycji, również mechanizm księgowania, obsługuje wiele systemów.
+      FAT16 - bardzo stary system plików, obsługa bardzo małymi partycjami oraz plikami
+      SWAP - nietypowy rodzaj partycji, który przechowuje dane w momencie gdy dostępna pamięć RAM zostanie przekroczona
+      Gdy tworzymy partycje możemy wybrać jej punkt montowania:
+      / - partycja stystemowa
+      /home - partycja na katalogi domowe
+      /tmp - "temporary", pliki tymczasowe
+      /usr - na dane pernamentne
+      /srv - dla usług systemów
+      /opt = na dodatkowe aplikacje czy pakiety
+      
   2.12 Nie chce wybrać żadnej płyty, więc pomijam opcje jej wybrania
   2.13 Mirror Server, oczywiście daje na PG, najbliżej więc najszybciej (ftp.task.gda.pl)
   2.14 Nie chce i nie potrzebuję proxy, więc pomnijam
   2.15 Nie chce żeby zabierało mi statystyyki więc daje na nie
   2.16 Software pozostawiam domyślnie, a no i instuluje jeszcze serwer SSH
-  2.17 Żeby uruchomić system instaluje boot loadera GRUB
+  2.17 Żeby uruchomić system instaluje boot loadera GRUB, jako miejsce istatalcji Debiana wybiream jedeny dostępny dysk /dev/sda
   2.18 W końcu koniec męczarni
