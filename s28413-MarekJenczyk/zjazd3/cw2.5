@@ -1,9 +1,14 @@
 #!/bin/bash
-for i in $(ls -p | grep -v /);
-do
-	echo -e "\n $i \n"
-	cat $i
-	echo -e "\n"
-	tac $i
+
+tablica=()
+for i in "$@"; do
+	tablica+=("$i")
 done
 
+for i in "${tablica[@]}"; do
+	cat $i
+done
+
+for i in "${tablica[@]}"; do
+	tac $i
+done
